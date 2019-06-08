@@ -15,5 +15,10 @@ class LoadingButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         //init
+        
+        self.addSubview(inidicator)
+        
+        inidicator.style = .gray
+        inidicator.startAnimating()
     }
 }
