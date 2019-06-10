@@ -18,7 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+        myButton.layer.borderColor = UIColor.black.cgColor
+        myButton.layer.borderWidth = 1
     }
 
     @IBAction func doAction(_ sender: LoadingButton) {
