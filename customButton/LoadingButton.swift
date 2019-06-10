@@ -27,6 +27,7 @@ class LoadingButton: UIButton {
             self.inidicator.isHidden = true
         }
         
+        inidicator.isUserInteractionEnabled = false
         inidicator.style = .gray
         inidicator.startAnimating()
         inidicator.translatesAutoresizingMaskIntoConstraints = false
