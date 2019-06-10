@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myButton: LoadingButton!
+    
+    var isLoading = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
     }
 
-
+    @IBAction func doAction(_ sender: LoadingButton) {
+        //isLoading = !isLoading
+        isLoading.toggle()
+        
+        if(isLoading){
+            self.myButton.startLoading()
+        }
+        else{
+            self.myButton.stopLoading()
+        }
+        
+    }
+    
 }
 

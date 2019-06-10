@@ -16,7 +16,16 @@ class LoadingButton: UIButton {
         super.awakeFromNib()
         //init
         
+       makeIndicator()
+    }
+    
+    private func makeIndicator() {
         self.addSubview(inidicator)
+        
+        //inidicator.isHidden = true//그냥 쓰면 화면 그리고 나서 적용되게 할 수 없다.
+        DispatchQueue.main.async {
+            self.inidicator.isHidden = true
+        }
         
         inidicator.style = .gray
         inidicator.startAnimating()
@@ -27,10 +36,14 @@ class LoadingButton: UIButton {
     }
     
     func startLoading() {
+        let titleColor = self.titleLabel?.textColor
+        self.setTitleColor(titleColor?.withAlphaComponent(0), for: UIControl.State.normal)
         inidicator.isHidden = false
     }
     
     func stopLoading() {
+        let titleColor = self.titleLabel?.textColor
+        self.setTitleColor(titleColor?.withAlphaComponent(1), for: UIControl.State.normal)
         inidicator.isHidden = true
     }
 }
