@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingButton: UIButton {
 
-    let inidicator = UIActivityIndicatorView()
+    private let inidicator = UIActivityIndicatorView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +20,17 @@ class LoadingButton: UIButton {
         
         inidicator.style = .gray
         inidicator.startAnimating()
+        inidicator.translatesAutoresizingMaskIntoConstraints = false
+        inidicator.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        inidicator.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+    }
+    
+    func startLoading() {
+        inidicator.isHidden = false
+    }
+    
+    func stopLoading() {
+        inidicator.isHidden = true
     }
 }
