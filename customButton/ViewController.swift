@@ -84,6 +84,7 @@ class ViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: self.pickerView.date)
         print("selected -\(dateString)")
+        self.basicTextField.text = dateString
         hide()
     }
     

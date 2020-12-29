@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-oy-EAK" customClass="LoadingButton" customModule="customButton" customModuleProvider="target">
-                                <rect key="frame" x="157" y="144" width="100" height="50"/>
+                                <rect key="frame" x="157" y="246" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="blS-ys-2tA"/>
                                     <constraint firstAttribute="height" constant="50" id="jcV-pp-6VT"/>
@@ -28,9 +28,10 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-Yq-BO5">
-                                <rect key="frame" x="82" y="294" width="250" height="142"/>
+                                <rect key="frame" x="82" y="396" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="dhN-6E-aWA"/>
+                                    <constraint firstAttribute="height" constant="40" id="dwk-Lb-yTR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -44,13 +45,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로그레스 처리가 있는 버튼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBZ-4T-BfB">
-                                <rect key="frame" x="112" y="103" width="190" height="21"/>
+                                <rect key="frame" x="112" y="205" width="190" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="datePicker로 날짜 입력하는 textField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmq-Nb-dgJ">
-                                <rect key="frame" x="75.5" y="253" width="263" height="21"/>
+                                <rect key="frame" x="75.5" y="355" width="263" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +67,6 @@
                         <constraints>
                             <constraint firstItem="gcA-oy-EAK" firstAttribute="top" secondItem="zBZ-4T-BfB" secondAttribute="bottom" constant="20" id="1Xe-OR-OpS"/>
                             <constraint firstItem="hmq-Nb-dgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AGB-1O-bvb"/>
-                            <constraint firstItem="gcA-oy-EAK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="L4c-Mu-IlE"/>
                             <constraint firstItem="EF2-1r-acT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEf-Pi-Ofn"/>
                             <constraint firstItem="pHS-Yq-BO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rhf-Qb-PXC"/>
                             <constraint firstItem="EF2-1r-acT" firstAttribute="top" secondItem="HB9-Q4-uk2" secondAttribute="bottom" constant="20" id="Wi2-Gp-oGK"/>
