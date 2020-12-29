@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     let pickerView = UIDatePicker()
     
+    @IBOutlet weak var mySwitch: CustomSwitch!
+    
     @IBOutlet weak var basicTextField: UITextField!
     
     override func viewDidLoad() {
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
         myButton.layer.borderWidth = 1
         
         setDefaultTextField()
+        
+        self.mySwitch.delegate = self
     }
 
     @IBAction func doAction(_ sender: LoadingButton) {
@@ -92,6 +96,24 @@ class ViewController: UIViewController {
         //_ = self.resignFirstResponder()
         self.basicTextField.resignFirstResponder()
     }
+    
+}
+
+extension ViewController: CustomSwitchDelegate {
+    func switchWillValueChange(sender: CustomSwitch, currentValue: Bool) {
+        sender.isOn = !sender.isOn
+        if sender.isOn {
+            print("switch on")
+        }
+        else {
+            print("switch off")
+        }
+    }
+    
+    func switchDidValueChange(sender: CustomSwitch, currentValue: Bool) {
+        
+    }
+    
     
 }
 
