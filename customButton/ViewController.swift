@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var basicTextField: UITextField!
     
+    @IBOutlet weak var barCodeImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +33,8 @@ class ViewController: UIViewController {
         setDefaultTextField()
         
         self.mySwitch.delegate = self
+        
+        applyBarcode()
     }
 
     @IBAction func doAction(_ sender: LoadingButton) {
@@ -98,6 +103,57 @@ class ViewController: UIViewController {
         self.basicTextField.resignFirstResponder()
     }
     
+    
+    @IBAction func alert2(_ sender: Any) {
+        let alert = UIAlertController(title: "", message: "협압 입력", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "수축기"
+        })
+        
+        alert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "이완기"
+        })
+        
+        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { (updateAction) in
+            let textfields = alert.textFields
+            
+            print("수축기 - \(alert.textFields?[0].text)")
+            print("이완기 - \(alert.textFields?[1].text)")
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        self.present(alert, animated: false)
+    }
+    
+    
+    @IBAction func alert1(_ sender: Any) {
+        let alert = UIAlertController(title: "", message: "협당 입력", preferredStyle: .alert)
+               alert.addTextField(configurationHandler: { (textField) in
+                   textField.placeholder = "혈당"
+               })
+               
+               
+               alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { (updateAction) in
+                   let textfields = alert.textFields
+                   
+                   print("혈당 - \(alert.textFields?[0].text)")
+                 
+                   
+               }))
+               
+               alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+               self.present(alert, animated: false)
+    }
+    
+    func applyBarcode() {
+        let barcodeString = "0000123456"
+        
+        guard let uiimage = barcodeString.generateBarcodeImage(isQRCode: false) else { return }
+        
+        self.barCodeImageView.image = uiimage
+    }
+    
 }
 
 extension ViewController: CustomSwitchDelegate {
@@ -115,6 +171,29 @@ extension ViewController: CustomSwitchDelegate {
         
     }
     
-    
 }
+
+extension String {
+    /** 바코드 이미지 만들기 - Parameter isQRCode: true(QRCode), false(Code128) */
+    func generateBarcodeImage(isQRCode: Bool) -> UIImage? {
+        let data = self.data(using: String.Encoding.ascii)
+        
+        var filterName = "CICode128BarcodeGenerator"
+        if isQRCode { filterName = "CIQRCodeGenerator" }
+        if let filter = CIFilter(name: filterName) {
+            filter.setValue(data, forKey: "inputMessage")
+            let transform = CGAffineTransform(scaleX: 3, y: 3)
+            if let output = filter.outputImage?.transformed(by: transform)
+            {
+                return UIImage(ciImage: output)
+                
+            }
+            
+        }
+        return nil
+        
+    }
+}
+
+
 
