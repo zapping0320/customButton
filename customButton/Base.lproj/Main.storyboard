@@ -139,7 +139,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XJR-Yy-26m">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1340"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1240"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트필드1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-Q7-794">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
@@ -202,17 +202,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="textview 01" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bYH-Lp-y9m">
-                                                <rect key="frame" x="0.0" y="480" width="414" height="250"/>
+                                                <rect key="frame" x="0.0" y="480" width="414" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="L2A-Gv-Zl2"/>
+                                                    <constraint firstAttribute="height" constant="150" id="L2A-Gv-Zl2"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트필드4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-5h-ARw">
-                                                <rect key="frame" x="0.0" y="730" width="414" height="20"/>
+                                                <rect key="frame" x="0.0" y="630" width="414" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="xjo-8b-uIt"/>
                                                 </constraints>
@@ -221,7 +221,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="textfield 04" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zj-pc-xow">
-                                                <rect key="frame" x="0.0" y="750" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="650" width="414" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="V6q-AM-q6E"/>
                                                 </constraints>
@@ -229,7 +229,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트뷰2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQr-vW-7Pe">
-                                                <rect key="frame" x="0.0" y="900" width="414" height="20"/>
+                                                <rect key="frame" x="0.0" y="800" width="414" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="rHk-rV-Opz"/>
                                                 </constraints>
@@ -238,7 +238,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="textview 02" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-VY-WKg">
-                                                <rect key="frame" x="0.0" y="920" width="414" height="250"/>
+                                                <rect key="frame" x="0.0" y="820" width="414" height="250"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="rsi-e8-tmd"/>
@@ -248,7 +248,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트필드5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpI-f0-uiR">
-                                                <rect key="frame" x="0.0" y="1170" width="414" height="20"/>
+                                                <rect key="frame" x="0.0" y="1070" width="414" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="y0e-c3-xyp"/>
                                                 </constraints>
@@ -257,7 +257,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="textfield 05" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-xk-QIc">
-                                                <rect key="frame" x="0.0" y="1190" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="1090" width="414" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="Kqq-QJ-laE"/>
                                                 </constraints>
@@ -294,6 +294,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dva-F7-H8d"/>
                     <connections>
+                        <outlet property="scrollView" destination="AcC-bx-GUJ" id="8ou-fS-uVN"/>
                         <outlet property="stackView" destination="XJR-Yy-26m" id="t44-1M-hca"/>
                         <outlet property="textfield1" destination="g1N-8L-2rl" id="unJ-FA-SQ6"/>
                         <outlet property="textfield2" destination="jA0-ZV-HRt" id="uzx-EN-Qyq"/>
