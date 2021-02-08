@@ -139,7 +139,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XJR-Yy-26m">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1410"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트필드1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKI-Q7-794">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
@@ -264,6 +264,25 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="텍스트뷰3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9b-rl-gQB">
+                                                <rect key="frame" x="0.0" y="1240" width="414" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="nfE-cO-F6M"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="textview 03" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-7i-upN">
+                                                <rect key="frame" x="0.0" y="1260" width="414" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="03B-HZ-wTO"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="bYH-Lp-y9m" firstAttribute="width" secondItem="XJR-Yy-26m" secondAttribute="width" id="8f5-Il-OUw"/>
@@ -303,6 +322,7 @@
                         <outlet property="textfield5" destination="oRN-xk-QIc" id="YkZ-ck-vtL"/>
                         <outlet property="textview1" destination="bYH-Lp-y9m" id="cQ9-UN-lYC"/>
                         <outlet property="textview2" destination="TwP-VY-WKg" id="iVq-DQ-yFd"/>
+                        <outlet property="textview3" destination="RTM-7i-upN" id="cr7-pO-MiD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6c-aG-06G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

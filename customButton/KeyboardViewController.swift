@@ -21,6 +21,7 @@ class KeyboardViewController: UIViewController {
     
     @IBOutlet weak var textview1: UITextView!
     @IBOutlet weak var textview2: UITextView!
+    @IBOutlet weak var textview3: UITextView!
     
     var activeTextField : UITextField? = nil
     var activeTextView: UITextView? = nil
@@ -35,8 +36,9 @@ class KeyboardViewController: UIViewController {
 //        self.textfield4.delegate = self
 //        self.textfield5.delegate = self
         
-        //self.textview1.delegate = self
-        //self.textview2.delegate = self
+        self.textview1.delegate = self
+        self.textview2.delegate = self
+        self.textview3.delegate = self
         
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tap))
@@ -128,10 +130,23 @@ extension KeyboardViewController: UITextFieldDelegate {
 
 extension KeyboardViewController : UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        self.activeTextView = textView
+        //self.activeTextView = textView
+        let scrollPoint : CGPoint = CGPoint.init(x:0, y:textView.frame.origin.y - 20)
+        self.scrollView.setContentOffset(scrollPoint, animated: true)
+        //scrollView.scrollToView(view: textView, animated: true)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
        // self.ac
+        self.scrollView.setContentOffset(CGPoint.zero, animated: true)
     }
+}
+
+extension UIScrollView {
+  func scrollToView(view:UIView, animated: Bool) {
+    if let origin = view.superview {
+      let childStartPoint = origin.convert(view.frame.origin, to: self)
+      self.scrollRectToVisible(CGRect(x:0, y:childStartPoint.y, width: 1,height: self.frame.height), animated: animated)
+    }
+  }
 }
