@@ -154,6 +154,12 @@ class ViewController: UIViewController {
         self.barCodeImageView.image = uiimage
     }
     
+    
+    @IBAction func testLottieView(_ sender: Any) {
+        let lotttieVC = LottieViewController()
+        self.present(lotttieVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension ViewController: CustomSwitchDelegate {

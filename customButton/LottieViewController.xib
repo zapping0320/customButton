@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LottieViewController" customModule="customButton" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingAnimView" destination="fnZ-DU-hwg" id="IZ0-2s-XUt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnZ-DU-hwg" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="87" y="328" width="240" height="240"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="9yA-3l-v5B"/>
+                        <constraint firstAttribute="height" constant="240" id="n3b-dS-Utd"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie2-oI-7hi">
+                    <rect key="frame" x="192" y="194" width="30" height="30"/>
+                    <state key="normal" title="닫기"/>
+                    <connections>
+                        <action selector="closeVC:" destination="-1" eventType="touchUpInside" id="You-jU-Lzc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ie2-oI-7hi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Du6-i8-u1U"/>
+                <constraint firstItem="fnZ-DU-hwg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mJo-gv-l9a"/>
+                <constraint firstItem="fnZ-DU-hwg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oLH-gc-win"/>
+                <constraint firstItem="Ie2-oI-7hi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="pS3-4l-Qe6"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="110"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="fnZ-DU-hwg"/>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
